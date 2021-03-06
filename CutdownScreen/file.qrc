@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icon/ICON.ico</file>
+        <file>icon/exit.ico</file>
+        <file>icon/option.ico</file>
+    </qresource>
+</RCC>
