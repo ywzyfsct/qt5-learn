@@ -133,7 +133,7 @@ void Widget::trayIconInit()
     exit = new QAction(QIcon(":/new/prefix1/icon/exit.ico"),"退出",this);
     tips = new QAction("提示",this);
     connect(option,&QAction::triggered,this,static_cast<void (Widget::*)()>(&Widget::startCapture));
-    connect(exit,&QAction::triggered,this,&QWidget::close);
+    connect(exit,&QAction::triggered,this,&QApplication::quit);
     connect(trayIcon,&QSystemTrayIcon::activated,this,static_cast<void (Widget::*)(QSystemTrayIcon::ActivationReason)>(&Widget::startCapture));
     connect(tips,&QAction::triggered,this,&Widget::aboutMessage);
     trayIcon->setToolTip("截图工具0.1");
